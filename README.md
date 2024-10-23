@@ -7,7 +7,8 @@
 
 
 ## Filter Coefficient
-![image](https://github.com/user-attachments/assets/bcca28e3-9199-4a05-8f0d-ab3e49865f78)
+![image](https://github.com/user-attachments/assets/554ad6ef-2ec5-4af0-90ef-61d952f4d733)
+
 
 ## HW block diagram 
 ![image](https://github.com/user-attachments/assets/f39595dd-bed0-4edf-a2ce-267dec99f269)
