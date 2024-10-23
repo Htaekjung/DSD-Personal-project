@@ -14,7 +14,11 @@ module FIR_Filter (
     input iEnSample_600kHz,        
 
     // Signed data input signal
+<<<<<<< HEAD
     input signed [2:0] iFirIn,
+=======
+    input signed [2:0] iFirIn
+>>>>>>> d93c8b182d026d3440c1586a2517c542172d8ceb
 
     // Signed data output Signal
     output reg [15:0] oFirOut          
@@ -24,8 +28,13 @@ module FIR_Filter (
     // Wire & register declaration
     *********************************************/
     // Data input latch
+<<<<<<< HEAD
     wire signed [15:0] coeff [0:32];       // 21개의 계수
     reg signed [15:0] shift_reg [0:32];   // 레지스터
+=======
+    wire signed [15:0] coeff [0:20];       // 21개의 계수
+    reg signed [15:0] shift_reg [0:20];   // 레지스터
+>>>>>>> d93c8b182d026d3440c1586a2517c542172d8ceb
     reg signed [15:0] Sum;
 
     wire signed [2:0] signed_iFirIn = iFirIn;
@@ -51,6 +60,7 @@ module FIR_Filter (
     wire signed [15:0] FirIn_Delay_19th;
     wire signed [15:0] FirIn_Delay_20th;
     wire signed [15:0] FirIn_Delay_21th;
+<<<<<<< HEAD
     wire signed [15:0] FirIn_Delay_22th;
     wire signed [15:0] FirIn_Delay_23th;
     wire signed [15:0] FirIn_Delay_24th;
@@ -63,6 +73,8 @@ module FIR_Filter (
     wire signed [15:0] FirIn_Delay_31th;
     wire signed [15:0] FirIn_Delay_32th;
     wire signed [15:0] FirIn_Delay_33th;
+=======
+>>>>>>> d93c8b182d026d3440c1586a2517c542172d8ceb
     integer i;
 
     wire signed [15:0] Fir_Sum_1st;
@@ -86,6 +98,7 @@ module FIR_Filter (
     wire signed [15:0] Fir_Sum_19th;
     wire signed [15:0] Fir_Sum_20th;
     wire signed [15:0] Fir_Sum_21th;
+<<<<<<< HEAD
     wire signed [15:0] Fir_Sum_22th;
     wire signed [15:0] Fir_Sum_23th;
     wire signed [15:0] Fir_Sum_24th;
@@ -98,10 +111,14 @@ module FIR_Filter (
     wire signed [15:0] Fir_Sum_31th;
     wire signed [15:0] Fir_Sum_32th;
     wire signed [15:0] Fir_Sum_33th;
+=======
+
+>>>>>>> d93c8b182d026d3440c1586a2517c542172d8ceb
 
     /*********************************************
     // Coefficient assign 방식으로 정의
     *********************************************/
+<<<<<<< HEAD
     assign coeff[0] = 16'h0003;
     assign coeff[1] = 16'h0000;
     assign coeff[2] = 16'h0065;
@@ -135,6 +152,29 @@ module FIR_Filter (
     assign coeff[30] = 16'h0065;
     assign coeff[31] = 16'h0000;
     assign coeff[32] = 16'h0003;
+=======
+    assign coeff[0] = 16'h000D;
+    assign coeff[1] = 16'h0000;
+    assign coeff[2] = 16'h0013;
+    assign coeff[3] = 16'h0018;
+    assign coeff[4] = 16'h0000;
+    assign coeff[5] = 16'h0025;
+    assign coeff[6] = 16'h0030;
+    assign coeff[7] = 16'h0000;
+    assign coeff[8] = 16'h0066;
+    assign coeff[9] = 16'h00CE;
+    assign coeff[10] = 16'h01F4;
+    assign coeff[11] = 16'h00CE;
+    assign coeff[12] = 16'h0066;
+    assign coeff[13] = 16'h0000;
+    assign coeff[14] = 16'h0030;
+    assign coeff[15] = 16'h0025;
+    assign coeff[16] = 16'h0000;
+    assign coeff[17] = 16'h0018;
+    assign coeff[18] = 16'h0013;
+    assign coeff[19] = 16'h0000;
+    assign coeff[20] = 16'h000D;
+>>>>>>> d93c8b182d026d3440c1586a2517c542172d8ceb
 
     /*********************************************
     // Assign FirIn_Delay signals
@@ -160,6 +200,7 @@ module FIR_Filter (
     assign FirIn_Delay_19th = shift_reg[18];
     assign FirIn_Delay_20th = shift_reg[19];
     assign FirIn_Delay_21th = shift_reg[20];
+<<<<<<< HEAD
     assign FirIn_Delay_22th = shift_reg[21];
     assign FirIn_Delay_23th = shift_reg[22];
     assign FirIn_Delay_24th = shift_reg[23];
@@ -172,6 +213,8 @@ module FIR_Filter (
     assign FirIn_Delay_31th = shift_reg[30];
     assign FirIn_Delay_32th = shift_reg[31];
     assign FirIn_Delay_33th = shift_reg[32];
+=======
+>>>>>>> d93c8b182d026d3440c1586a2517c542172d8ceb
 
 
     assign Fir_Sum_1st = shift_reg[0] * coeff[0];
@@ -179,7 +222,11 @@ module FIR_Filter (
     assign Fir_Sum_3rd = shift_reg[2] * coeff[2];
     assign Fir_Sum_4th = shift_reg[3] * coeff[3];
     assign Fir_Sum_5th = shift_reg[4] * coeff[4];
+<<<<<<< HEAD
     assign Fir_Sum_6th = shift_reg[5] * coeff[5];
+=======
+    assign Fir_Sum_6th = shift_reg[5] * -coeff[5];
+>>>>>>> d93c8b182d026d3440c1586a2517c542172d8ceb
     assign Fir_Sum_7th = shift_reg[6] * coeff[6];
     assign Fir_Sum_8th = shift_reg[7] * coeff[7];
     assign Fir_Sum_9th = shift_reg[8] * coeff[8];
@@ -195,6 +242,7 @@ module FIR_Filter (
     assign Fir_Sum_19th = shift_reg[18] * coeff[18];
     assign Fir_Sum_20th = shift_reg[19] * coeff[19];
     assign Fir_Sum_21th = shift_reg[20] * coeff[20];
+<<<<<<< HEAD
     assign Fir_Sum_22th = shift_reg[21] * coeff[21];
     assign Fir_Sum_23th = shift_reg[22] * coeff[22];
     assign Fir_Sum_24th = shift_reg[23] * coeff[23];
@@ -207,6 +255,9 @@ module FIR_Filter (
     assign Fir_Sum_31th = shift_reg[30] * coeff[30];
     assign Fir_Sum_32th = shift_reg[31] * coeff[31];
     assign Fir_Sum_33th = shift_reg[32] * coeff[32];
+=======
+
+>>>>>>> d93c8b182d026d3440c1586a2517c542172d8ceb
     /*********************************************
     // Input data latch with Sync. D-FF
     *********************************************/
@@ -214,7 +265,11 @@ module FIR_Filter (
     always @(posedge iClk_12MHz) begin
         // Sync. reset
         if (!iRsn) begin
+<<<<<<< HEAD
             for (i = 0; i < 33; i = i + 1) begin
+=======
+            for (i = 0; i < 21; i = i + 1) begin
+>>>>>>> d93c8b182d026d3440c1586a2517c542172d8ceb
                 shift_reg[i] <= 16'h0; // Initialize shift register
             end
             Sum <= 16'h0; // Initialize sum
@@ -223,11 +278,16 @@ module FIR_Filter (
         else if (iEnSample_600kHz) begin
             // Shift Register 동작
             shift_reg[0] <= iFirIn;  // Input sample 저장
+<<<<<<< HEAD
             for (i = 1; i < 33; i = i + 1) begin
+=======
+            for (i = 1; i < 21; i = i + 1) begin
+>>>>>>> d93c8b182d026d3440c1586a2517c542172d8ceb
                 shift_reg[i] <= shift_reg[i-1];  // Delay를 위해 shift register 사용
             end
 
             // Sum of all products
+<<<<<<< HEAD
             Sum <= Fir_Sum_1st + Fir_Sum_2nd - Fir_Sum_3rd + 
                 Fir_Sum_4th + Fir_Sum_5th - Fir_Sum_6th + 
                 Fir_Sum_7th + Fir_Sum_8th - Fir_Sum_9th +
@@ -239,6 +299,14 @@ module FIR_Filter (
                 Fir_Sum_25th + Fir_Sum_26th + Fir_Sum_27th - 
                 Fir_Sum_28th + Fir_Sum_29th + Fir_Sum_30th - 
                 Fir_Sum_31th + Fir_Sum_32th + Fir_Sum_33th;
+=======
+            Sum <= Fir_Sum_1st - Fir_Sum_2nd + Fir_Sum_3rd + Fir_Sum_4th -
+                Fir_Sum_5th + Fir_Sum_6th + Fir_Sum_7th - Fir_Sum_8th +
+                Fir_Sum_9th + Fir_Sum_10th + Fir_Sum_11th + Fir_Sum_12th +
+                Fir_Sum_13th - Fir_Sum_14th + Fir_Sum_15th + Fir_Sum_16th -
+                Fir_Sum_17th + Fir_Sum_18th + Fir_Sum_19th - Fir_Sum_20th +
+                Fir_Sum_21th;
+>>>>>>> d93c8b182d026d3440c1586a2517c542172d8ceb
 
             // FIR filter 출력
             oFirOut <= Sum;
