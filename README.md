@@ -1,4 +1,6 @@
-# FIR Filter 사양
+# FIR Filter의 impulse response 나타내기
+
+## FIR Filter 사양
 - Sampling rate : 600kHz
 - Symbol rate : 200kHz
 - Symbol : -1(3'b111), +1(3'b001) <- signed
@@ -12,7 +14,9 @@
 
 
 ## Impulse response (Symbol : +1(3'b001)) 
-  ![image](https://github.com/user-attachments/assets/8324b042-6e2d-44ae-a0ed-e9a035dc6b7f)
+![image](https://github.com/user-attachments/assets/3cbfdf73-bfb8-44a1-853c-8f72d62bf127)
+
 
 ## Impulse response (Symbol : -1(3'b111))
-![image](https://github.com/user-attachments/assets/d3933560-60d0-4a98-a128-096fea1c21b4)
+![image](https://github.com/user-attachments/assets/d69327f0-d055-4a65-a2aa-e69a27a75963)
+
