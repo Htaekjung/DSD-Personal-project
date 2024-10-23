@@ -17,11 +17,7 @@ module FIR_Filter_tb_111;
     wire [15:0] oFirOut;
     
     // FIR Filter instantiation
-<<<<<<< HEAD
     FIR_Filter UUT (
-=======
-    FIR_Filter_1 UUT (
->>>>>>> d93c8b182d026d3440c1586a2517c542172d8ceb
         .iClk_12MHz(iClk_12MHz),
         .iRsn(iRsn),
         .iFirIn(iFirIn),
@@ -65,11 +61,7 @@ module FIR_Filter_tb_111;
 
     initial begin
         cycle_count = 0; // 카운터 초기화
-<<<<<<< HEAD
         repeat (150) begin
-=======
-        repeat (128) begin
->>>>>>> d93c8b182d026d3440c1586a2517c542172d8ceb
             if (cycle_count == 0) begin
                 // 64번째 주기마다 3'b111 입력
                 iFirIn = 3'b111;
