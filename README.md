@@ -11,9 +11,7 @@
 ![image](https://github.com/user-attachments/assets/f39595dd-bed0-4edf-a2ce-267dec99f269)
 
 
-## Impulse response (Symbol : +1(3'b001))
-  ![image](https://github.com/user-attachments/assets/56054408-a800-4b64-922e-19a6bcd6b10f)
-  
+## Impulse response (Symbol : +1(3'b001)) 
   ![image](https://github.com/user-attachments/assets/8324b042-6e2d-44ae-a0ed-e9a035dc6b7f)
 
 ## Impulse response (Symbol : -1(3'b111))
